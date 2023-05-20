@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-"""A script that starts a Flask web application"""
+
+
+"""utilizing Flask for Web app frame work"""
 from flask import Flask
 
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
-def display_hello():
+@app.route("/airbnb-onepage/", strict_slashes = False)
+def home():
+    """method that defines '/' route for Flask web application"""
     return "Hello HBNB!"
 
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    app.run(host="localhost", port=5000)
